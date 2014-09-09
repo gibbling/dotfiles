@@ -4,6 +4,8 @@ eval $(gdircolors ~/.dircolors/dircolors.256dark)
 # Aliases
 alias ls='gls --color=auto'
 alias ll='ls -al'
+alias clr='clear'
+alias gpdel='git rm $(git ls-files --deleted)'
 alias homebrew='ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"'
 
 # Env Vars
