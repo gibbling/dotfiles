@@ -1,6 +1,10 @@
 # ~/.dircolors/themefile
 eval $(gdircolors ~/.dircolors/dircolors.256dark)
 
+# Fix issue with Tmux Alfred2 Workflow not keeping iTerm locale
+export LC_ALL=en_US.utf-8 
+export LANG="$LC_ALL"
+
 # Aliases
 alias ls='gls --color=auto'
 alias ll='ls -al'
