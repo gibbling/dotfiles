@@ -1,3 +1,6 @@
 [submodule "oh-my-fish"]
 	path = oh-my-fish
 	url = git://github.com/bpinto/oh-my-fish.git
+[submodule "/Users/nergal/.dotfiles/fish/.fishmarks"]
+	path = /Users/nergal/.dotfiles/fish/.fishmarks
+	url = https://github.com/techwizrd/fishmarks.git
