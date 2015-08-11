@@ -1,5 +1,7 @@
 # Path to your oh-my-fish.
 set fish_path $HOME/.dotfiles/oh-my-fish
+# Load oh-my-fish configuration.
+. $fish_path/oh-my-fish.fish
 
 # Exports
 set -U -x ORACLE_HOME /Applications/oracle/product/instantclient_64/11.2.0.4.0
@@ -13,7 +15,7 @@ set -gx PATH /opt/chefdk/bin $PATH
 set -gx PATH $ORACLE_HOME/bin $PATH 
 
 # Theme
-set fish_theme agnoster
+Theme "agnoster"
 
 # Dircolors
 # ~/.dircolors/themefile
@@ -66,5 +68,3 @@ set -U default_user nergal
 # Path to your custom folder (default path is $FISH/custom)
 #set fish_custom $HOME/dotfiles/oh-my-fish
 
-# Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
