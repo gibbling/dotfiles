@@ -66,3 +66,4 @@ set -U default_user nergal
 
 Plugin "brew"
 Plugin "theme"
+Plugin "balias"
