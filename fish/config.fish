@@ -19,7 +19,7 @@ Theme "agnoster"
 
 # Dircolors
 # ~/.dircolors/themefile
-if test -e ~/.dir_colors
+if test -e ~/.dircolors
     switch (uname)
         case Darwin
             eval (gdircolors -c ~/.dircolors/dircolors.256dark)
@@ -61,10 +61,8 @@ set -U -x ORGNAME mhsit
 set -U theme_display_user yes
 set -U default_user nergal
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
-# Example format: set fish_plugins autojump bundler
-
 # Path to your custom folder (default path is $FISH/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
 
+Plugin "brew"
+Plugin "theme"
