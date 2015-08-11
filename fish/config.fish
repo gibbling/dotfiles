@@ -10,7 +10,7 @@ Plugin "balias"
 Plugin "grc"
 
 # Theme
-Theme "agnoster"
+theme "agnoster"
 
 # Exports
 set -U -x ORACLE_HOME /Applications/oracle/product/instantclient_64/11.2.0.4.0
