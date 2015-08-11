@@ -2,14 +2,15 @@
 set fish_path $HOME/.dotfiles/oh-my-fish
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
-# Theme
-Theme "agnoster"
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Path to your custom folder (default path is $FISH/custom)
 Plugin "brew"
 Plugin "theme"
 Plugin "balias"
 Plugin "grc"
+
+# Theme
+Theme "agnoster"
 
 # Exports
 set -U -x ORACLE_HOME /Applications/oracle/product/instantclient_64/11.2.0.4.0
