@@ -71,5 +71,5 @@ set -U -x OPSCODE_USER enev7ow
 set -U -x ORGNAME mhsit
 
 set -U theme_display_user yes
-set -U default_user nergal
+set -U default_user $USER
 
