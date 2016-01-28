@@ -8,9 +8,6 @@ Plugin "brew"
 #Plugin "theme"
 Plugin "balias"
 Plugin "grc"
-Plugin "mc"
-Plugin "ta"
-Plugin "tiny"
 
 # Theme
 Theme "agnoster"
