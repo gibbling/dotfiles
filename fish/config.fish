@@ -39,6 +39,8 @@ if test -e ~/.dircolors
     end
 end
 
+set  -U grc_plugin --color
+
 # Shortcuts
 switch (uname)
     case Darwin
