@@ -1,7 +1,17 @@
+# Path to Oh My Fish install.
+ set -gx OMF_PATH "/Users/bkurpiel/.local/share/omf"
+#
+# # Customize Oh My Fish configuration path.
+# #set -gx OMF_CONFIG "/Users/bkurpiel/.config/omf"
+#
+# # Load oh-my-fish configuration.
+ source $OMF_PATH/init.fish
+#
+
 # Path to your oh-my-fish.
-set fish_path $HOME/.dotfiles/oh-my-fish
+#set fish_path $HOME/.dotfiles/oh-my-fish
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+#. $fish_path/oh-my-fish.fish
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Path to your custom folder (default path is $FISH/custom)
 Plugin "brew"
