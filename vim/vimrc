@@ -3,6 +3,8 @@ set cursorline
 set number
 set cmdheight=2 
 set clipboard=unnamed
+let $DOTVIM='~/.dotfiles/vim'
+set rtp^=$DOTVIM 
 call pathogen#infect()
 Helptags
 syntax on
@@ -115,9 +117,11 @@ colorscheme solarized
 " NERDTree Config
 let NERDTreeShowHidden=1
 map <F2> :NERDTreeToggle<CR>
+" AutoFocus to buffer not NERDTree
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Closes NERDTree if its the last buffer open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Airline config
 " Airline tabline showing buffers
