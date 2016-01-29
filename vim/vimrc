@@ -1,0 +1,153 @@
+set ruler
+set cursorline
+set number
+set cmdheight=2 
+set clipboard=unnamed
+call pathogen#infect()
+Helptags
+syntax on
+filetype plugin indent on
+syntax enable
+
+if &shell =~# 'bin/fish$'
+    set shell=/bin/sh
+endif
+
+"" Testing these 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
+" --
+let mapleader = ","
+" --
+set encoding=utf-8
+set nocompatible
+set scrolloff=3
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set ttyfast
+set backspace=indent,eol,start
+set laststatus=2
+" --
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+" Leader-Space clears search (stops highlighting)
+nnoremap <leader><space> :noh<cr>
+" Navigate via brackets
+nnoremap <tab> %
+vnoremap <tab> %
+
+"  Inforce hjkl use.  Die arrow keys!!!!  DIE DIE DIE
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+" Long Lines - Testing!
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+if v:version >=730
+    set colorcolumn=85
+endif
+
+
+if has("unix")
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        "Centralize vim files [un/bkp/sw]
+        if v:version >= 730
+            set undofile
+            set undodir=~/Library/vim/.undo//
+        endif
+        set backupdir=~/Library/vim/.backup//
+        set directory=~/Library/vim/.swp//
+    elseif s:uname == "Linux\n"
+        if v:version >= 730
+            set undofile
+            set undodir=~/.vimfiles/.undo//
+        endif
+        set backupdir=~/.vimfiles/.backup//
+        set directory=~/.vimfiles/.swp//
+    endif
+endif
+
+"  This is for pasting code.  Autoindent can fuck shit up 
+nnoremap <F5> :set invpaste paste?<CR>
+set pastetoggle=<F5>
+set showmode
+
+
+" Solarized stuff
+if !has('gui_running')
+	"Compatibility for Terminal
+	let g:solarized_termtrans = 1
+	
+	if (&t_Co >= 256 || $TERM == 'xterm-256color')
+	" Do nothing, it handles itself.
+
+	else
+	" Make Solarized use 16 colors for Terminal support
+	let g:solarized_termcolors = 16
+	endif
+endif
+set background=dark
+colorscheme solarized
+"call togglebg#map("<F5>")
+
+" NERDTree Config
+let NERDTreeShowHidden=1
+map <F2> :NERDTreeToggle<CR>
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Airline config
+" Airline tabline showing buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" stop airline setting tmuxline theme - theme is called tmuxline_snapshot
+let g:airline#extensions#tmuxline#enabled = 0
+" enable powerline symbols and fonts
+let g:tmuxline_powerline_separators = 1
+let g:airline_powerline_fonts = 1
+
+" vim-chef syntax and autocomplete - maybe?
+autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
+
+" crontab on osx - setting nobackup to prevent following error (crontab: temp file must be edited in place)
+autocmd filetype crontab setlocal nobackup nowritebackup
+
+" Map jj to escape mode
+imap jj <ESC>
+
+" quick pairs
+imap <leader>' ''<ESC>i
+imap <leader>" ""<ESC>i
+imap <leader>( ()<ESC>i
+imap <leader>[ []<ESC>i
+imap <leader>{ {}<ESC>i
+imap <leader>< <><ESC>i
+
+" easy split nav - Ctrl+h/j/k/l
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
