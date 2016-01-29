@@ -1,0 +1,3 @@
+[submodule "omf/fishmarks"]
+	path = omf/fishmarks
+	url = https://github.com/techwizrd/fishmarks.git
