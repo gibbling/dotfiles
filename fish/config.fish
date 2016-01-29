@@ -37,6 +37,7 @@ if test -e ~/.dircolors
 end
 
 set  -U grc_plugin --color
+set -U grcplugin_df -H
 
 # Shortcuts
 switch (uname)
