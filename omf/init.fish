@@ -10,6 +10,11 @@ set -U -x ORACLE_HOME /Applications/oracle/product/instantclient_64/11.2.0.4.0
 set -U -x DYLD_LIBRARY_PATH $ORACLE_HOME/lib
 set -U -x EDITOR vim
 
+# Fishmarks Config
+. ~/.dotfiles/omf/fishmarks/marks.fish
+set -gx SDIRS $HOME/.dotfiles/omf/.sdirs
+
+
 . $HOME/.homebrew-github-api-token
 
 # PATH
