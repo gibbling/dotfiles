@@ -14,7 +14,6 @@ set -U -x EDITOR vim
 . ~/.dotfiles/omf/fishmarks/marks.fish
 set -gx SDIRS $HOME/.dotfiles/omf/.sdirs
 
-
 . $HOME/.homebrew-github-api-token
 
 # PATH
