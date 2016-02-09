@@ -1,5 +1,7 @@
 package balias
+package bang-bang
 package brew
 package grc
+package osx
 theme agnoster
 theme default

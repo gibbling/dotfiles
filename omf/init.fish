@@ -20,6 +20,7 @@ set -gx SDIRS $HOME/.dotfiles/omf/.sdirs
 set -gx PATH /opt/chefdk/bin $PATH
 set -gx PATH $ORACLE_HOME/bin $PATH 
 
+eval (chef shell-init fish)
 
 # Dircolors
 # ~/.dircolors/themefile
