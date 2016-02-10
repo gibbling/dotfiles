@@ -1,0 +1,6 @@
+export DIR_chef_repo_mhsit="$HOME/workspace/chef-prod-repos/mhsit-chef-repo"
+export DIR_home="$HOME"
+export DIR_docs="$HOME/Documents"
+export DIR_downloads="$HOME/Downloads"
+export DIR_dotfiles="$HOME/.dotfiles"
+export DIR_workspace="$HOME/workspace"
