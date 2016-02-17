@@ -13,6 +13,7 @@ set -U -x EDITOR vim
 # Fishmarks Config
 . ~/.dotfiles/omf/fishmarks/marks.fish
 set -gx SDIRS $HOME/.dotfiles/omf/.sdirs
+_update_completions
 
 . $HOME/.homebrew-github-api-token
 
