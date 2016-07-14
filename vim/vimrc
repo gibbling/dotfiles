@@ -70,6 +70,9 @@ if v:version >=730
     set colorcolumn=85
 endif
 
+" Quickly open/reload vim
+ nnoremap <leader>ev :split $MYVIMRC<CR>
+ nnoremap <leader>sv :source $MYVIMRC<CR>
 
 if has("unix")
     let s:uname = system("uname")
@@ -91,7 +94,7 @@ if has("unix")
     endif
 endif
 
-"  This is for pasting code.  Autoindent can fuck shit up 
+"  This is for pasting code.  Autoindent can fuck shit up
 nnoremap <F5> :set invpaste paste?<CR>
 set pastetoggle=<F5>
 set showmode
@@ -101,7 +104,7 @@ set showmode
 if !has('gui_running')
 	"Compatibility for Terminal
 	let g:solarized_termtrans = 1
-	
+
 	if (&t_Co >= 256 || $TERM == 'xterm-256color')
 	" Do nothing, it handles itself.
 
@@ -125,14 +128,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Airline config
 " Airline tabline showing buffers
-let g:airline#extensions#tabline#enabled = 1
-
+let g:airline#extensions#tabline#enabled = 0
+" disable bufferline support
+let g:airline#extensions#bufferline#enabled = 0
 " stop airline setting tmuxline theme - theme is called tmuxline_snapshot
 let g:airline#extensions#tmuxline#enabled = 0
 " enable powerline symbols and fonts
 let g:tmuxline_powerline_separators = 1
 let g:airline_powerline_fonts = 1
 
+let g:bufferline_echo = 0
+let g:bufferline_show_bufnr = 1
 " vim-chef syntax and autocomplete - maybe?
 autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
 
@@ -156,3 +162,10 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 " east split resize - CTRL + -/+ and CTRL + </>
+
+" Easy buffer navigation
+map <leader>n :MBEbn<cr>
+map <leader>p :MBEbp<cr>
+map <leader>f :MBEbf<cr>
+map <leader>b :MBEbb<cr>
+map <leader>d :MBEbd<cr>
