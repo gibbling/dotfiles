@@ -22,6 +22,8 @@ set -gx PATH /opt/chefdk/bin $PATH
 set -gx PATH $ORACLE_HOME/bin $PATH 
 
 eval (chef shell-init fish)
+#Eval for docker the-new-deal system
+eval (docker-machine env thenewdeal)
 
 # Dircolors
 # ~/.dircolors/themefile
