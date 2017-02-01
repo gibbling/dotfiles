@@ -71,8 +71,10 @@ if v:version >=730
 endif
 
 " Quickly open/reload vim
- nnoremap <leader>ev :split $MYVIMRC<CR>
- nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :split $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+" Quickly open fish config
+nnoremap <leader>ef :split $OMF_CONFIG/init.fish<CR>
 
 if has("unix")
     let s:uname = system("uname")
